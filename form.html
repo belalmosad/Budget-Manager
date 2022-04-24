@@ -8,7 +8,28 @@
     <title>Manage</title>
 </head>
 <body>
-    
-    <script src="scripts/script.js"></script>
+    <div class="add-expense">
+        <form action="/index.html">
+
+            <label for="category">Category</label>
+            <select name="category" id="category" required>
+                <option value="Grocery">Grocery</option>
+                <option value="Rent">Rent</option>
+                <option value="Transportation">Transportation</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Personal Spending">Personal Spending</option>
+            </select> <br>
+
+            <label for="description">Description</label>
+            <textarea name="description" id="description" cols="60" rows="5" required></textarea> <br>
+
+            <label for="cost">Cost</label>
+            <input type="number" required id="cost"><br>
+
+            <input type="submit" value="Submit" id="submit-btn">
+
+        </form>
+    </div>
+    <script src="scripts/form.js"></script>
 </body>
 </html>

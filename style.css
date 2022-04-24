@@ -101,3 +101,58 @@
 }
 
 /*-------------------------------------------------------------*/
+
+
+/*Add expense tyling*/
+
+.add-expense *
+{
+    padding: 10px;;
+    margin: 10px;
+    text-align: center;
+    font-size: larger;
+    border-color:  #E94560;
+}
+.add-expense label
+{
+    color: white;
+    font-weight: bold;
+}
+.add-expense select
+{
+    color: #E94560;
+}
+.add-expense textarea
+{
+   color:aliceblue;
+}
+.add-expense input
+{
+    color: aliceblue;
+}
+.add-expense textarea:focus,
+.add-expense input:focus,
+.add-expense select:focus
+{
+    outline:#E94560 solid
+
+}
+.add-expense #submit-btn
+{
+    width: 300px;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    font-weight: bold;
+    border: 3px solid #E94560;
+    position: relative;
+    top: 20px;
+    left: 35px;
+}
+.add-expense #submit-btn:hover
+{
+    background-color: aliceblue;
+    cursor: pointer;
+    color:#E94560;
+    
+    
+}
