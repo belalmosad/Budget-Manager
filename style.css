@@ -1,0 +1,28 @@
+*
+{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Segoe UI';
+    background-color: #1A1A2E;
+    
+}
+
+/*Header Styling*/
+.header 
+{
+    color: #E94560;
+    border: 8px solid #E94560;
+    width: 40%;
+    text-align: center;
+    padding: 15px;
+    margin: 10px;
+    
+    transition: color 0.2s, border 0.2s ;
+    transition-timing-function: linear;
+}
+.header:hover
+{
+    color: aliceblue;
+    cursor: pointer;
+    border-color: aliceblue;;
+}
