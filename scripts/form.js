@@ -1,7 +1,6 @@
 document.forms[0].onsubmit= function(e){
     if(!localStorage["data"]) {
         localStorage.setItem("data", JSON.stringify([]));
-        console.log("data arr added");
     }
     var dataArr = [];
     var category = document.getElementById('category').value;
