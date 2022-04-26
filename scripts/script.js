@@ -1,22 +1,25 @@
 document.body.onload = function(){
-    if(localStorage.description) 
+    if(localStorage["data"]) 
     {
-        addTableData(localStorage);
+        var allData = JSON.parse(localStorage["data"]);
+        addTableData(allData);
     }
 }
 
 function addTableData(data){
-    var categoryData = document.createElement('td');
-    var descriptionData = document.createElement('td');
-    var costData = document.createElement('td');
+    for(var dataArr of data) {
+        var categoryData = document.createElement('td');
+        var descriptionData = document.createElement('td');
+        var costData = document.createElement('td');
 
-    categoryData.innerHTML = data.category;
-    descriptionData.innerHTML = data.description;
-    costData.innerHTML = data.cost;
+        categoryData.innerHTML = dataArr[0];
+        descriptionData.innerHTML = dataArr[1];
+        costData.innerHTML = dataArr[2];
 
-    var dataRow = document.createElement('tr');
-    dataRow.appendChild(categoryData);
-    dataRow.appendChild(descriptionData);
-    dataRow.appendChild(costData);
-    document.querySelector('tbody').appendChild(dataRow);
+        var dataRow = document.createElement('tr');
+        dataRow.appendChild(categoryData);
+        dataRow.appendChild(descriptionData);
+        dataRow.appendChild(costData);
+        document.querySelector('tbody').appendChild(dataRow);
+    }
 }

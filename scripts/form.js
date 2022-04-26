@@ -1,11 +1,19 @@
-var userData = {};
-document.getElementById('submit-btn').onclick= function(e){
-    
+document.forms[0].onsubmit= function(e){
+    if(!localStorage["data"]) {
+        localStorage.setItem("data", JSON.stringify([]));
+        console.log("data arr added");
+    }
+    var dataArr = [];
     var category = document.getElementById('category').value;
     var description = document.getElementById('description').value;
     var cost = document.getElementById('cost').value;
 
-    localStorage.setItem("category", category);
-    localStorage.setItem("description", description);
-    localStorage.setItem("cost", cost); 
+    dataArr.push(category);
+    dataArr.push(description);
+    dataArr.push(cost);
+
+    var allData = JSON.parse(localStorage.getItem("data"));
+    allData.push(dataArr);
+
+    localStorage.setItem("data", JSON.stringify(allData))
 }
