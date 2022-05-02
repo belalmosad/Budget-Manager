@@ -8,6 +8,7 @@ document.body.onload = function(){
 
 function addTableData(data){
     for(var dataArr of data) {
+        var itemID = document.createElement('td');
         var categoryData = document.createElement('td');
         var descriptionData = document.createElement('td');
         var costData = document.createElement('td');
@@ -15,8 +16,11 @@ function addTableData(data){
         categoryData.innerHTML = dataArr[0];
         descriptionData.innerHTML = dataArr[1];
         costData.innerHTML = dataArr[2];
+        itemID.innerHTML = dataArr[3];
+
 
         var dataRow = document.createElement('tr');
+        dataRow.appendChild(itemID);
         dataRow.appendChild(categoryData);
         dataRow.appendChild(descriptionData);
         dataRow.appendChild(costData);
