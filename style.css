@@ -156,3 +156,24 @@
     
     
 }
+
+
+/*-------------------------------------------------------------*/
+
+
+/*Delete item button*/
+.del-item-btn
+{
+    color:#E94560;
+    font-size: x-large;
+    border: none;
+   
+}
+.del-item-btn:hover
+{
+    cursor: pointer;
+    color: aliceblue;
+
+
+}
+
