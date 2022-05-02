@@ -23,3 +23,9 @@ function addTableData(data){
         document.querySelector('tbody').appendChild(dataRow);
     }
 }
+
+document.getElementById('del-all-btn').onclick = function(){
+    if(confirm("Do you really want to delete all items?")){
+        document.querySelector('.data-table table tbody').innerHTML = '';
+    }
+}
