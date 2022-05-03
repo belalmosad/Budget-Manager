@@ -1,13 +1,16 @@
+var data;
+
 document.body.onload = function(){
     if(localStorage["data"]) 
     {
-        var allData = JSON.parse(localStorage["data"]);
-        addTableData(allData);
+        data = JSON.parse(localStorage["data"]);
+        addTableData(data);
     }
 }
 
-function addTableData(data){
+function addTableData(){
     for(var dataArr of data) {
+        if(dataArr === null) continue;
         var itemID = document.createElement('td');
         var categoryData = document.createElement('td');
         var descriptionData = document.createElement('td');
@@ -21,6 +24,7 @@ function addTableData(data){
 
         deleteItemBtn.setAttribute('id', 'delete-item-btn-'+dataArr[3]);
         deleteItemBtn.setAttribute('class', 'del-item-btn');
+        deleteItemBtn.addEventListener('click', deleteItem(dataArr[3]));
         deleteItemBtn.innerHTML = '⌦';
 
 
@@ -38,5 +42,16 @@ document.getElementById('del-all-btn').onclick = function(){
     if(confirm("Do you really want to delete all items?")){
         localStorage.clear();
         document.querySelector('.data-table table tbody').innerHTML = '';
+    }
+}
+
+function deleteItem(itemID){
+    
+    return function(){
+        if(confirm("Are you sure?")){
+            delete data[itemID];
+            localStorage.setItem("data", JSON.stringify(data));
+            location.reload();
+        }
     }
 }
