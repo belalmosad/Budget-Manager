@@ -25,6 +25,7 @@ document.body.onload = function(){
         document.getElementById('total-expenses').innerHTML = localStorage["totalExpenses"];
     }
     if(localStorage["remainingBudget"]){
+        localStorage.setItem("remainingBudget", +localStorage.totalBudget - +localStorage.totalExpenses)
         document.getElementById('remaining-budget').innerHTML = localStorage["remainingBudget"];
     }
 }
@@ -69,6 +70,8 @@ document.getElementById('del-all-btn').onclick = function(){
 function deleteItem(itemID){
     return function(){
         if(confirm("Are you sure?")){
+            var itemCost = +data[itemID][2];
+            localStorage.setItem("totalExpenses", +localStorage.totalExpenses - itemCost);
             delete data[itemID];
             localStorage.setItem("data", JSON.stringify(data));
             location.reload();

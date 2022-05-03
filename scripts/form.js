@@ -23,4 +23,5 @@ document.forms[0].onsubmit= function(e){
 
     localStorage.setItem("data", JSON.stringify(allData));
     localStorage.setItem("nextID", parseInt(localStorage.nextID) + 1);
+    localStorage.setItem("totalExpenses", +localStorage.totalExpenses + +cost);
 }
