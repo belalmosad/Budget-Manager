@@ -5,6 +5,14 @@ document.body.onload = function(){
         var totalBudget = +prompt("Enter your total budget");
         localStorage.setItem("totalBudget", totalBudget);
     }
+    if(!localStorage["totalExpenses"]){
+        localStorage.setItem("totalExpenses", 0);
+    }
+    if(!localStorage["remainingBudget"]){
+        var remainingBudget = parseInt(localStorage.totalBudget - localStorage.totalExpenses);
+        localStorage.setItem("remainingBudget", remainingBudget);
+    }
+
     if(localStorage["data"]) 
     {
         data = JSON.parse(localStorage["data"]);
@@ -12,6 +20,12 @@ document.body.onload = function(){
     }
     if(localStorage["totalBudget"]){
         document.getElementById('total-budget').innerHTML = localStorage["totalBudget"];
+    }
+    if(localStorage["totalExpenses"]){
+        document.getElementById('total-expenses').innerHTML = localStorage["totalExpenses"];
+    }
+    if(localStorage["remainingBudget"]){
+        document.getElementById('remaining-budget').innerHTML = localStorage["remainingBudget"];
     }
 }
 
@@ -66,7 +80,7 @@ document.getElementById('edit-total-budget-btn').onclick = function(){
     var totalBudget = prompt("Enter your budget");
     if(totalBudget){
         localStorage.setItem("totalBudget", +totalBudget);
-    document.getElementById('total-budget').innerHTML = localStorage["totalBudget"];
+        localStorage.setItem("remainingBudget", +totalBudget - +localStorage.totalExpenses);
+        location.reload();
     }
-    
 }
