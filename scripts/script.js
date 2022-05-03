@@ -20,7 +20,7 @@ function addTableData(){
         categoryData.innerHTML = dataArr[0];
         descriptionData.innerHTML = dataArr[1];
         costData.innerHTML = dataArr[2];
-        itemID.innerHTML = dataArr[3];
+        itemID.innerHTML = parseInt(dataArr[3])+1;
 
         deleteItemBtn.setAttribute('id', 'delete-item-btn-'+dataArr[3]);
         deleteItemBtn.setAttribute('class', 'del-item-btn');
@@ -40,13 +40,12 @@ function addTableData(){
 
 document.getElementById('del-all-btn').onclick = function(){
     if(confirm("Do you really want to delete all items?")){
-        localStorage.clear();
+        localStorage.removeItem("data");
         document.querySelector('.data-table table tbody').innerHTML = '';
     }
 }
 
 function deleteItem(itemID){
-    
     return function(){
         if(confirm("Are you sure?")){
             delete data[itemID];
