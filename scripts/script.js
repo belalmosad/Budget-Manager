@@ -64,6 +64,7 @@ document.getElementById('del-all-btn').onclick = function(){
     if(confirm("Do you really want to delete all items?")){
         localStorage.removeItem("data");
         localStorage.removeItem("totalExpenses");
+        localStorage.removeItem("nextID");
         location.reload();
     }
 }
