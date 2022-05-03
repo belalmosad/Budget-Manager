@@ -6,6 +6,11 @@ document.forms[0].onsubmit= function(e){
     if(!localStorage["data"]) {
         localStorage.setItem("data", JSON.stringify([]));
     }
+    if(+localStorage.remainingBudget < (+localStorage.totalExpenses + +document.getElementById('cost').value)){
+        e.preventDefault();
+        alert("You do not have enough money");
+        return;
+    }
 
     var dataArr = [];
     var category = document.getElementById('category').value;
