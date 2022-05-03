@@ -1,10 +1,17 @@
 var data;
 
 document.body.onload = function(){
+    if(!localStorage["totalBudget"]){
+        var totalBudget = +prompt("Enter your total budget");
+        localStorage.setItem("totalBudget", totalBudget);
+    }
     if(localStorage["data"]) 
     {
         data = JSON.parse(localStorage["data"]);
         addTableData(data);
+    }
+    if(localStorage["totalBudget"]){
+        document.getElementById('total-budget').innerHTML = localStorage["totalBudget"];
     }
 }
 
@@ -53,4 +60,13 @@ function deleteItem(itemID){
             location.reload();
         }
     }
+}
+
+document.getElementById('edit-total-budget-btn').onclick = function(){
+    var totalBudget = prompt("Enter your budget");
+    if(totalBudget){
+        localStorage.setItem("totalBudget", +totalBudget);
+    document.getElementById('total-budget').innerHTML = localStorage["totalBudget"];
+    }
+    
 }
