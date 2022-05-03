@@ -197,3 +197,21 @@
 {
     color: #E94560;
 }
+.legend button
+{
+    font-size: large;
+    font-weight: bold;
+    border:#E94560 1px solid;
+    color:aliceblue;
+    padding: 0px;
+    border: none;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: linear
+}
+.legend button:hover
+{
+    cursor: pointer;
+    color: #E94560;
+}
