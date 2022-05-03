@@ -173,7 +173,27 @@
 {
     cursor: pointer;
     color: aliceblue;
-
-
 }
 
+/*-------------------------------------------------------------*/
+
+
+/*Legend*/
+.legend
+{
+    border: #E94560 3px solid;
+    position: fixed;
+    bottom: 0px;
+    padding: 10px;
+    color:#E94560;
+    margin-left: 5px;
+}
+.legend p
+{
+    font-size: x-large;
+    font-weight: bold;
+}
+.legend hr
+{
+    color: #E94560;
+}
