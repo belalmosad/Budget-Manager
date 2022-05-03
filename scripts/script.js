@@ -63,7 +63,8 @@ function addTableData(){
 document.getElementById('del-all-btn').onclick = function(){
     if(confirm("Do you really want to delete all items?")){
         localStorage.removeItem("data");
-        document.querySelector('.data-table table tbody').innerHTML = '';
+        localStorage.removeItem("totalExpenses");
+        location.reload();
     }
 }
 

@@ -19,7 +19,7 @@ document.forms[0].onsubmit= function(e){
     dataArr.push(itemID);
 
     var allData = JSON.parse(localStorage.getItem("data"));
-    allData.push(dataArr);
+    allData[itemID] = dataArr;
 
     localStorage.setItem("data", JSON.stringify(allData));
     localStorage.setItem("nextID", parseInt(localStorage.nextID) + 1);
