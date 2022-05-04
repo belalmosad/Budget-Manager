@@ -84,6 +84,14 @@ function deleteItem(itemID){
 document.getElementById('edit-total-budget-btn').onclick = function(){
     
     var totalBudget = prompt("Enter your budget");
+    while(isNaN(totalBudget) || totalBudget < 0){
+        alert("Please enter valid number");
+        totalBudget = prompt("Enter your budget");
+    }
+    while(+totalBudget < +localStorage.totalExpenses && totalBudget != null){
+        alert("Your budget cannot be changed since it's less than your expenses");
+        totalBudget = prompt("Enter your budget");
+    }
     if(totalBudget){
         localStorage.setItem("totalBudget", +totalBudget);
         localStorage.setItem("remainingBudget", +totalBudget - +localStorage.totalExpenses);
