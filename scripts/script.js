@@ -82,6 +82,7 @@ function deleteItem(itemID){
 }
 
 document.getElementById('edit-total-budget-btn').onclick = function(){
+    
     var totalBudget = prompt("Enter your budget");
     if(totalBudget){
         localStorage.setItem("totalBudget", +totalBudget);

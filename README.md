@@ -33,6 +33,7 @@ The application relies on JavaScript's `window` property: `localStorage` as the 
 - [x] Implement add one item functionality.
 - [x] Implement delete all data.functionality.
 - [x] Implement delete single expense item functionality.
+- [ ] Add constraints on total budget input (non negative real numbers).
 - [ ] Implement HTML and CSS for Edit single expense item.
 - [ ] Implement Edit functionality for each expense item.
 - [ ] Implement data visualiation feature.
