@@ -3,6 +3,7 @@ if(localStorage.nextID == undefined){
 }
 
 document.forms[0].onsubmit= function(e){
+    e.preventDefault();
     if(!localStorage["data"]) {
         localStorage.setItem("data", JSON.stringify([]));
     }
@@ -29,4 +30,5 @@ document.forms[0].onsubmit= function(e){
     localStorage.setItem("data", JSON.stringify(allData));
     localStorage.setItem("nextID", parseInt(localStorage.nextID) + 1);
     localStorage.setItem("totalExpenses", +localStorage.totalExpenses + +cost);
+    location.replace('index.html');
 }
