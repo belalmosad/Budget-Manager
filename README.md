@@ -27,4 +27,13 @@ The application relies on JavaScript's `window` property: `localStorage` as the 
 
 
 ## TODO
+- [x] Implement basic HTML and CSS for home page.
+- [x] Implement HTML and CSS for add expense page.
+- [x] Implement info legend that contains total budget, total expenses, and remaining budget.
+- [x] Implement add one item functionality.
+- [x] Implement delete all data.functionality.
+- [x] Implement delete single expense item functionality.
+- [ ]Implement HTML and CSS for Edit single expense item.
 - [ ] Implement Edit functionality for each expense item.
+- [ ] Implement data visualiation feature.
+
