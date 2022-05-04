@@ -24,3 +24,7 @@ The application relies on JavaScript's `window` property: `localStorage` as the 
 4. `localStorage.totalExpenses`: contains the total value of the expenses, when the user enters an expense item (e.g. car rent that costs 50$), the cost value (i.e. 50$) is added to `localStorage.totalExpenses`.
 
 5. `localStorage.remainingBudget`: contains the left amount of money after adding expenses. This value cannot be negative value, if the user attempts to add an expense item that costs more than the `remainingBudget` value, the item will not be added, and the user will be informed he cannot add these expenses.
+
+
+## TODO
+- [ ] Implement Edit functionality for each expense item.
