@@ -28,26 +28,26 @@ The application relies on JavaScript's `window` property: `localStorage` as the 
 
 ## Problems, Issues, and Solutions
 
-### **Problem 1**: How to represent/store/retrieve data?
-#### **Solution**: By using `localStorage` property as a mock/tiny database. For larger scale app I Would use database instead.
+- ### **Problem 1**: How to represent/store/retrieve data?
+    - #### **Solution**: By using `localStorage` property as a mock/tiny database. For larger scale app I Would use database instead.
 
-### **Problem 2**: How to refer to each expense record for delete/update that *specific* record?
-#### **Solution**: In the case of using a database, we usually use a primary key as a unique identifier. But in this case (using `localStorage`) I assigned an ID for each item (using `localStorage.nextID` property).
+- ### **Problem 2**: How to refer to each expense record for delete/update that *specific* record?
+    - #### **Solution**: In the case of using a database, we usually use a primary key as a unique identifier. But in this case (using `localStorage`) I assigned an ID for each item (using `localStorage.nextID` property).
 
-### **Problem 3**: When click on the update ✎ button, a new form page should open, how to pass the data of a specific record to the update form page so that the form is filled with the original data to be updated?
-#### **Solution**: Pass the data of the record in `localStorage` as follows:
-#### In the page that contains all records
-```
-localStorage.setItem("updateItemData", JSON.stringify(dataArr));
-``` 
-#### In the update form page
-```
-localStorage.getItem("updateItemData");
-```
-Then, after finishing the update process, 
-```
-localStorage.removeItem("updateItemData");
-```
+- ### **Problem 3**: When click on the update ✎ button, a new form page should open, how to pass the data of a specific record to the update form page so that the form is filled with the original data to be updated?
+    - #### **Solution**: Pass the data of the record in `localStorage` as follows:
+        #### In the page that contains all records
+        ```
+        localStorage.setItem("updateItemData", JSON.stringify(dataArr));
+        ``` 
+        #### In the update form page
+        ```
+        localStorage.getItem("updateItemData");
+        ```
+        Then, after finishing the update process, 
+        ```
+        localStorage.removeItem("updateItemData");
+        ```
 
 
 ## TODO
