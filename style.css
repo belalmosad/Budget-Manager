@@ -162,14 +162,18 @@
 
 
 /*Delete item button*/
-.del-item-btn
+.item-btn
 {
     color:#E94560;
     font-size: x-large;
     border: none;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: linear;
    
 }
-.del-item-btn:hover
+.item-btn:hover
 {
     cursor: pointer;
     color: aliceblue;
