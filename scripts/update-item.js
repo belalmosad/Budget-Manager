@@ -1,10 +1,12 @@
 const item = JSON.parse(localStorage.getItem("updateItemData"));
-document.getElementById('category').value = item[0];
-document.getElementById('description').value = item[1];
-document.getElementById('cost').value = item[2];
+const oldCost = item[2];
+const oldDescription = item[1];
+const oldCategory = item[0];
+document.getElementById('category').value = oldCategory;
+document.getElementById('description').value = oldDescription;
+document.getElementById('cost').value = oldCost;
 
-localStorage.totalExpenses -= +document.getElementById('cost').value;
-localStorage.remainingBudget += +document.getElementById('cost').value;
+
 
 
 document.forms[0].onsubmit = function(e) {
@@ -17,7 +19,7 @@ document.forms[0].onsubmit = function(e) {
     var updatedDescription = document.getElementById('description').value;
     var updatedCost = document.getElementById('cost').value;
 
-    if(+updatedCost > +localStorage.remainingBudget){
+    if(+updatedCost > (+localStorage.remainingBudget + +oldCost)){
         alert("You Don't have enough budget");
         return;
     }
@@ -29,7 +31,8 @@ document.forms[0].onsubmit = function(e) {
 
     allData[itemID] = updatedData;
     localStorage.setItem("data", JSON.stringify(allData));
-    localStorage.setItem("totalExpenses", +localStorage.totalExpenses + +updatedCost);
+    localStorage.setItem("totalExpenses", (+localStorage.totalExpenses - +oldCost) + +updatedCost);
+    localStorage.setItem("remainingBudget", +localStorage.totalBudget - +localStorage.totalExpenses);
     localStorage.removeItem("updateItemData");
     location.replace('index.html');
 }
