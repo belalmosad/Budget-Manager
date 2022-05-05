@@ -38,7 +38,6 @@ The application relies on JavaScript's `window` property: `localStorage` as the 
 - [x] Implement HTML and CSS for Edit single expense item.
 - [x] Implement Edit functionality for each expense item.
 - [x] Fix bugs with info legend.
-- [ ] Separate Dealing with Data in a separate interface (for Cleaner code).
 - [ ] Implement Quantity feature for each item.
 - [ ] Build custom Confirm, prompt, and alert components instead of relying on browser's.
 - [ ] Implement data visualiation feature.
