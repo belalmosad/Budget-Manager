@@ -65,4 +65,5 @@ localStorage.removeItem("updateItemData");
 - [ ] Implement Quantity feature for each item.
 - [ ] Build custom Confirm, prompt, and alert components instead of relying on browser's.
 - [ ] Implement data visualiation feature.
+- [ ] Implement responsive design.
 
