@@ -1,5 +1,4 @@
 var data;
-
 document.body.onload = function(){
     if(!localStorage["totalBudget"]){
         var totalBudget = +prompt("Enter your total budget");
@@ -52,6 +51,7 @@ function addTableData(){
 
         editItemBtn.setAttribute('id', 'edit-item-btn-'+dataArr[3]);
         editItemBtn.setAttribute('class', 'item-btn');
+        editItemBtn.addEventListener('click', openUpdatePage(dataArr));
         editItemBtn.innerHTML = '✎';
 
 
@@ -75,18 +75,6 @@ document.getElementById('del-all-btn').onclick = function(){
     }
 }
 
-function deleteItem(itemID){
-    return function(){
-        if(confirm("Are you sure?")){
-            var itemCost = +data[itemID][2];
-            localStorage.setItem("totalExpenses", +localStorage.totalExpenses - itemCost);
-            delete data[itemID];
-            localStorage.setItem("data", JSON.stringify(data));
-            location.reload();
-        }
-    }
-}
-
 document.getElementById('edit-total-budget-btn').onclick = function(){
     
     var totalBudget = prompt("Enter your budget");
@@ -102,5 +90,27 @@ document.getElementById('edit-total-budget-btn').onclick = function(){
         localStorage.setItem("totalBudget", +totalBudget);
         localStorage.setItem("remainingBudget", +totalBudget - +localStorage.totalExpenses);
         location.reload();
+    }
+}
+
+
+
+
+function deleteItem(itemID){
+    return function(){
+        if(confirm("Are you sure?")){
+            var itemCost = +data[itemID][2];
+            localStorage.setItem("totalExpenses", +localStorage.totalExpenses - itemCost);
+            delete data[itemID];
+            localStorage.setItem("data", JSON.stringify(data));
+            location.reload();
+        }
+    }
+}
+
+function openUpdatePage(dataArr) {
+    return function() {
+        localStorage.setItem("updateItemData", JSON.stringify(dataArr));
+        location.assign("update-item.html");
     }
 }
