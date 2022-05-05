@@ -38,6 +38,7 @@ function addTableData(){
         var descriptionData = document.createElement('td');
         var costData = document.createElement('td');
         var deleteItemBtn = document.createElement('button');
+        var editItemBtn = document.createElement('button');
 
         categoryData.innerHTML = dataArr[0];
         descriptionData.innerHTML = dataArr[1];
@@ -45,9 +46,13 @@ function addTableData(){
         itemID.innerHTML = parseInt(dataArr[3])+1;
 
         deleteItemBtn.setAttribute('id', 'delete-item-btn-'+dataArr[3]);
-        deleteItemBtn.setAttribute('class', 'del-item-btn');
+        deleteItemBtn.setAttribute('class', 'item-btn');
         deleteItemBtn.addEventListener('click', deleteItem(dataArr[3]));
         deleteItemBtn.innerHTML = '⌦';
+
+        editItemBtn.setAttribute('id', 'edit-item-btn-'+dataArr[3]);
+        editItemBtn.setAttribute('class', 'item-btn');
+        editItemBtn.innerHTML = '✎';
 
 
         var dataRow = document.createElement('tr');
@@ -56,6 +61,7 @@ function addTableData(){
         dataRow.appendChild(descriptionData);
         dataRow.appendChild(costData);
         dataRow.appendChild(deleteItemBtn);
+        dataRow.appendChild(editItemBtn);
         document.querySelector('tbody').appendChild(dataRow);
     }
 }
