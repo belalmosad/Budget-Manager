@@ -24,12 +24,13 @@
             <textarea name="description" id="description" cols="60" rows="5" required></textarea> <br>
 
             <label for="cost">Cost</label>
-            <input type="number" step="0.1" required id="cost" name="cost"><br>
+            <input type="number" step="0.1" required id="cost" name="cost" min="0"><br>
 
             <input type="submit" value="Submit" id="submit-btn">
 
         </form>
     </div>
+    <script src="scripts/expense-item.js"></script>
     <script src="scripts/form.js"></script>
 </body>
 </html>

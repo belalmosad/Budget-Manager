@@ -30,8 +30,9 @@ document.body.onload = function(){
 }
 
 function addTableData(){
-    for(var dataArr of data) {
-        if(dataArr === null) continue;
+    for(var e of data) {
+        if(JSON.stringify(e) === JSON.stringify({}) || e === null) continue;
+        var expeseItem = JSON.parse(e);
         var itemID = document.createElement('td');
         var categoryData = document.createElement('td');
         var descriptionData = document.createElement('td');
@@ -39,19 +40,19 @@ function addTableData(){
         var deleteItemBtn = document.createElement('button');
         var editItemBtn = document.createElement('button');
 
-        categoryData.innerHTML = dataArr[0];
-        descriptionData.innerHTML = dataArr[1];
-        costData.innerHTML = dataArr[2];
-        itemID.innerHTML = parseInt(dataArr[3])+1;
+        categoryData.innerHTML = expeseItem.category;
+        descriptionData.innerHTML = expeseItem.description
+        costData.innerHTML = expeseItem.cost;
+        itemID.innerHTML = parseInt(expeseItem.ID)+1;
 
-        deleteItemBtn.setAttribute('id', 'delete-item-btn-'+dataArr[3]);
+        deleteItemBtn.setAttribute('id', 'delete-item-btn-'+expeseItem.ID);
         deleteItemBtn.setAttribute('class', 'item-btn');
-        deleteItemBtn.addEventListener('click', deleteItem(dataArr[3]));
+        deleteItemBtn.addEventListener('click', deleteItem(expeseItem.ID));
         deleteItemBtn.innerHTML = '⌦';
 
-        editItemBtn.setAttribute('id', 'edit-item-btn-'+dataArr[3]);
+        editItemBtn.setAttribute('id', 'edit-item-btn-'+expeseItem.ID);
         editItemBtn.setAttribute('class', 'item-btn');
-        editItemBtn.addEventListener('click', openUpdatePage(dataArr));
+        editItemBtn.addEventListener('click', openUpdatePage(expeseItem));
         editItemBtn.innerHTML = '✎';
 
 
@@ -99,7 +100,8 @@ document.getElementById('edit-total-budget-btn').onclick = function(){
 function deleteItem(itemID){
     return function(){
         if(confirm("Are you sure?")){
-            var itemCost = +data[itemID][2];
+            var itemCost = +JSON.parse(data[itemID]).cost;
+            console.log(itemCost);
             localStorage.setItem("totalExpenses", +localStorage.totalExpenses - itemCost);
             delete data[itemID];
             localStorage.setItem("data", JSON.stringify(data));
@@ -108,9 +110,9 @@ function deleteItem(itemID){
     }
 }
 
-function openUpdatePage(dataArr) {
+function openUpdatePage(expeseItem) {
     return function() {
-        localStorage.setItem("updateItemData", JSON.stringify(dataArr));
+        localStorage.setItem("updateItemData", JSON.stringify(expeseItem));
         location.assign("update-item.html");
     }
 }

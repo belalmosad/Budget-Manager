@@ -13,19 +13,19 @@ document.forms[0].onsubmit= function(e){
         return;
     }
 
-    var dataArr = [];
+    
     var category = document.getElementById('category').value;
     var description = document.getElementById('description').value;
     var cost = document.getElementById('cost').value;
     var itemID = localStorage.nextID;
 
-    dataArr.push(category);
-    dataArr.push(description);
-    dataArr.push(cost);
-    dataArr.push(itemID);
+    var expeseItem = new ExpenseItem(itemID,category, description, cost);
+
 
     var allData = JSON.parse(localStorage.getItem("data"));
-    allData[itemID] = dataArr;
+    allData[itemID] = JSON.stringify(expeseItem);
+
+    
 
     localStorage.setItem("data", JSON.stringify(allData));
     localStorage.setItem("nextID", parseInt(localStorage.nextID) + 1);

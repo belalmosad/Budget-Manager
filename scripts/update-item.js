@@ -1,7 +1,7 @@
 const item = JSON.parse(localStorage.getItem("updateItemData"));
-const oldCost = item[2];
-const oldDescription = item[1];
-const oldCategory = item[0];
+const oldCost = item.cost;
+const oldDescription = item.description;
+const oldCategory = item.category;
 document.getElementById('category').value = oldCategory;
 document.getElementById('description').value = oldDescription;
 document.getElementById('cost').value = oldCost;
@@ -11,9 +11,8 @@ document.getElementById('cost').value = oldCost;
 
 document.forms[0].onsubmit = function(e) {
     e.preventDefault();
-    var updatedData = [];
     var allData = JSON.parse(localStorage.data);
-    var itemID = item[3];
+    var itemID = item.ID;
 
     var updatedCategory = document.getElementById('category').value;
     var updatedDescription = document.getElementById('description').value;
@@ -24,12 +23,10 @@ document.forms[0].onsubmit = function(e) {
         return;
     }
 
-    updatedData.push(updatedCategory);
-    updatedData.push(updatedDescription);
-    updatedData.push(updatedCost);
-    updatedData.push(itemID);
+    var updatedExpenseItem = new ExpenseItem(itemID, updatedCategory, 
+                                                updatedDescription, updatedCost);
 
-    allData[itemID] = updatedData;
+    allData[itemID] = JSON.stringify(updatedExpenseItem);
     localStorage.setItem("data", JSON.stringify(allData));
     localStorage.setItem("totalExpenses", (+localStorage.totalExpenses - +oldCost) + +updatedCost);
     localStorage.setItem("remainingBudget", +localStorage.totalBudget - +localStorage.totalExpenses);
