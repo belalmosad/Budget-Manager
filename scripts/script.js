@@ -94,17 +94,10 @@ document.getElementById('edit-total-budget-btn').onclick = function(){
     }
 }
 
-
-
-
 function deleteItem(itemID){
     return function(){
         if(confirm("Are you sure?")){
-            var itemCost = +JSON.parse(data[itemID]).cost;
-            console.log(itemCost);
-            localStorage.setItem("totalExpenses", +localStorage.totalExpenses - itemCost);
-            delete data[itemID];
-            localStorage.setItem("data", JSON.stringify(data));
+            DataModel.removeExpenseItem(itemID);
             location.reload();
         }
     }
