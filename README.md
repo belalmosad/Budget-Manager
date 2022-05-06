@@ -48,8 +48,8 @@ The application relies on JavaScript's `window` property: `localStorage` as the 
         ```
         localStorage.removeItem("updateItemData");
         ```
-
-
+- ### **Problem 4**: When trying to add new feature (quantity of each record), I faced alot of problems editing my code .. it was a miss.
+    - **Solution**: Realizing that the code was not clean enough to add new feature easily. So, I started learning practices of writing clean code and Design patterns in JavaScript (Not Implemented yet). But as an initial step, I separated dealing with data in a separate interface `DataModel`, and relied on an object `ExpenseItem` instead of just an array.
 ## TODO
 - [x] Implement basic HTML and CSS for home page.
 - [x] Implement HTML and CSS for add expense page.
