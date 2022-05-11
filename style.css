@@ -60,19 +60,13 @@
 /*-------------------------------------------------------------*/
 
 
-
-
 /*Data table styling*/
+
+
 .data-table
 {
     color: aliceblue;
-    margin:auto;
     margin-top: 20px;;
-}
-.data-table table
-{
-    margin: auto;
-    width: 90%;
 }
 .data-table table thead th
 {
@@ -85,7 +79,6 @@
     font-size: large;
     padding: 10px;
     background-color: #E94560;
-    max-width: 500px;
 }
 .data-table td
 {
