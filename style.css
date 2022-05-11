@@ -70,8 +70,8 @@
 }
 .data-table table thead th
 {
-    font-size: x-large;
-    padding: 15px;
+    font-size: large;
+    padding: 8px;
     background-color: #E94560;
 }
 .data-table table tbody td
