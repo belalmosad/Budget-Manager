@@ -171,8 +171,8 @@
     margin-left: 5px;
 
     width: 15rem;
-    position: fixed;
-    bottom: 1%;
+    position: absolute;
+    bottom: 2%;
 }
 .legend p
 {
