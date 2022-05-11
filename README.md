@@ -52,7 +52,7 @@ The application relies on JavaScript's `window` property: `localStorage` as the 
     - **Solution**: Realizing that the code was not clean enough to add new feature easily. So, I started learning practices of writing clean code and Design patterns in JavaScript (Not Implemented yet). But as an initial step, I separated dealing with data in a separate interface `DataModel`, and relied on an object `ExpenseItem` instead of just an array.
 
 - ### **Problem 5**: Adding Responsiveness for better Experience in other devices.
-- **Solution**: Using css property `display: flex` and wrapping it in class: `row`, then using it for through the other components.
+    - **Solution**: Using css property `display: flex` and wrapping it in class: `row`, then using it for through the other components.
 ## TODO
 - [x] Implement basic HTML and CSS for home page.
 - [x] Implement HTML and CSS for add expense page.
