@@ -11,19 +11,16 @@
 .header 
 {
     color: #E94560;
-    border: 5px solid #E94560;
     text-align: center;
-    padding: 5px;
     margin: 10px;
     
     transition: color 0.2s, border 0.2s ;
     transition-timing-function: linear;
 }
-.header:hover
-{
-    color: aliceblue;
-    cursor: pointer;
-    border-color: aliceblue;;
+
+.header img {
+    width: 100%;
+    height: auto;
 }
 /*-------------------------------------------------------------*/
 
@@ -32,7 +29,7 @@
 /*Manage button Styling*/
 
 .manage-btn {
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 .manage-btn button
 {
