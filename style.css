@@ -36,7 +36,8 @@
 }
 .manage-btn button
 {
-    width: 40%;
+    width: 100%;
+    margin-top: 5px;
     color: #E94560;
     padding: 10px;
     font-size: 20px;
