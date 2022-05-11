@@ -165,11 +165,14 @@
 .legend
 {
     border: #E94560 3px solid;
-    position: fixed;
     bottom: 0px;
     padding: 10px;
     color:#E94560;
     margin-left: 5px;
+
+    width: 15rem;
+    position: fixed;
+    bottom: 1%;
 }
 .legend p
 {
