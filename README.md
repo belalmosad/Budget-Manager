@@ -68,6 +68,6 @@ The application relies on JavaScript's `window` property: `localStorage` as the 
 - [ ] Build custom Confirm, prompt, and alert components instead of relying on browser's.
 - [ ] Implement data visualiation feature.
 - [x] Implement responsive design for main page.
-- [ ] Implement responsive design for form page.
+- [x] Implement responsive design for form page.
 - [ ] Fix Issue: Responsive Issue when adding long description in data table.
 
