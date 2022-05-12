@@ -87,10 +87,10 @@
 
 .add-expense *
 {
-    padding: 10px;;
-    margin: 10px;
+    margin-top: 20px;
+    margin-top: 10px;
     text-align: center;
-    font-size: larger;
+    font-size: large;
     border-color:  #E94560;
 }
 .add-expense label
@@ -119,14 +119,12 @@
 }
 .add-expense #submit-btn
 {
-    width: 300px;
+    width: 7rem;
     transition-duration: 0.2s;
     transition-timing-function: linear;
     font-weight: bold;
     border: 3px solid #E94560;
-    position: relative;
-    top: 20px;
-    left: 35px;
+    
 }
 .add-expense #submit-btn:hover
 {
@@ -207,6 +205,13 @@
 .row {
     display: flex;
     width: 100%;
+    
+}
+.flex-column {
+    flex-direction: column;
+}
+.flex-row {
+    flex-direction: row;
 }
 .container {
     width: 90%;
