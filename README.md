@@ -70,4 +70,5 @@ The application relies on JavaScript's `window` property: `localStorage` as the 
 - [x] Implement responsive design for main page.
 - [x] Implement responsive design for form page.
 - [x] Fix Issue: Responsive Issue when adding long description in data table.
+- [ ] Implement responsiveness to Edit item form.
 
