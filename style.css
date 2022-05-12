@@ -60,6 +60,7 @@
 table td {
     word-wrap: break-word;    
     overflow-wrap: break-word; 
+    max-width: 7rem;;
 }
 .data-table
 {
