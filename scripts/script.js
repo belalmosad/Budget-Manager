@@ -33,7 +33,6 @@ function addTableData(){
     for(var e of data) {
         if(JSON.stringify(e) === JSON.stringify({}) || e === null) continue;
         var expeseItem = JSON.parse(e);
-        var itemID = document.createElement('td');
         var categoryData = document.createElement('td');
         var descriptionData = document.createElement('td');
         var costData = document.createElement('td');
@@ -43,7 +42,6 @@ function addTableData(){
         categoryData.innerHTML = expeseItem.category;
         descriptionData.innerHTML = expeseItem.description
         costData.innerHTML = expeseItem.cost;
-        itemID.innerHTML = parseInt(expeseItem.ID)+1;
 
         deleteItemBtn.setAttribute('id', 'delete-item-btn-'+expeseItem.ID);
         deleteItemBtn.setAttribute('class', 'item-btn');
@@ -57,7 +55,6 @@ function addTableData(){
 
 
         var dataRow = document.createElement('tr');
-        dataRow.appendChild(itemID);
         dataRow.appendChild(categoryData);
         dataRow.appendChild(descriptionData);
         dataRow.appendChild(costData);
