@@ -229,6 +229,15 @@ table td {
     cursor: pointer;
 }
 
+
+
+/*----------------- Summary page---------------*/
+#summary-header {
+    color: #E94560;
+    text-align: center;
+    margin-top: 10px;
+}
+
 /* ----------------- Grid System Implementation -------------------*/
 .row {
     display: flex;
