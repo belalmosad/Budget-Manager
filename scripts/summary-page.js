@@ -9,5 +9,26 @@ document.body.onload = function() {
         if (index == headerContent.length) {
             clearInterval(id);
         }
-    }, 100);
+    }, 50);
+
+    fillProgressBar(localStorage.getItem("totalExpenses"), "exp-amount", "exp-percent");
+    fillProgressBar(localStorage.getItem("remainingBudget"), "save-amount", "save-percent");
 };
+
+
+function fillProgressBar(data, elemID, spanID) {
+    var totalBudget = localStorage.getItem("totalBudget");
+    var percent = (data / totalBudget)*100;
+    var i = 0;
+    var id = setInterval(function() {
+        document.getElementById(elemID).style.width = (i+'%');
+        animatePercent(spanID, i+"%");
+        if(i >= percent) {
+            clearInterval(id);
+        }
+        i++;
+    }, 10) 
+}
+function animatePercent(id, data) {
+    document.getElementById(id).innerHTML = data;
+}
