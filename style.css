@@ -167,7 +167,7 @@ table td {
 /*Legend*/
 .legend
 {
-    border: #E94560 3px solid;
+    /* border: #E94560 3px solid; */
     bottom: 0px;
     padding: 10px;
     color:#E94560;
@@ -185,6 +185,7 @@ table td {
 .legend hr
 {
     color: #E94560;
+    max-width: 15rem;
 }
 .legend button
 {
@@ -203,6 +204,29 @@ table td {
 {
     cursor: pointer;
     color: #E94560;
+}
+
+.vis-btn {
+    margin-top: 5rem;
+    margin-left: 2rem;
+}
+.vis-btn button {
+    padding:5px;
+    background: transparent;
+    border: 3px solid #E94560;
+    color: #E94560;
+    font-size: large;
+    font-weight: bold;
+    width: 100%;
+    border-radius: 10px;
+
+    transition-duration: 250ms;
+    transition-property: border;
+    transition-timing-function: linear;
+}
+.vis-btn button:hover {
+    border: 3px solid aliceblue;
+    cursor: pointer;
 }
 
 /* ----------------- Grid System Implementation -------------------*/

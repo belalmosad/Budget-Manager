@@ -1,5 +1,6 @@
 var data;
 document.body.onload = function(){
+    animateHrElement();
     if(!localStorage["totalBudget"]){
         var totalBudget = +prompt("Enter your total budget");
         localStorage.setItem("totalBudget", totalBudget);
@@ -106,3 +107,32 @@ function openUpdatePage(expeseItem) {
         location.assign("update-item.html");
     }
 }
+
+function animateHrElement() {
+    var width = 0;
+    var hrElem = document.querySelector(".legend hr");
+    var id=setInterval(function() {
+        hrElem.setAttribute('width', width+'%');
+        width += 1;
+        if(width >= 80) {
+            clearInterval(id);
+        }
+    }, 1);
+}
+
+(function() {
+    var remainingBudget = localStorage.getItem("remainingBudget");
+    var totalBudget = localStorage.getItem("totalBudget");
+    if(remainingBudget <= (totalBudget * 0.2)) {
+        document.getElementById("rem").style.fontWeight = "bold";
+        setInterval(function() {
+            document.getElementById('rem').style.color = "red";
+            console.log(1);
+            setTimeout(function(){
+                document.getElementById('rem').style.color = "#E94560";
+                console.log(2);
+            }, 500);
+            
+        }, 1000)
+    }
+})();
