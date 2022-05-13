@@ -120,6 +120,10 @@ function animateHrElement() {
     }, 1);
 }
 
+document.querySelector("#vis-btn button").addEventListener('click', function() {
+    window.location = "visualise-data.html";
+});
+
 (function() {
     var remainingBudget = localStorage.getItem("remainingBudget");
     var totalBudget = localStorage.getItem("totalBudget");
@@ -127,10 +131,8 @@ function animateHrElement() {
         document.getElementById("rem").style.fontWeight = "bold";
         setInterval(function() {
             document.getElementById('rem').style.color = "red";
-            console.log(1);
             setTimeout(function(){
                 document.getElementById('rem').style.color = "#E94560";
-                console.log(2);
             }, 500);
             
         }, 1000)

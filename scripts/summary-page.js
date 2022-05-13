@@ -1,9 +1,8 @@
 document.body.onload = function() {
     var header = document.getElementById("summary-header");
     var headerContent = header.innerHTML;
-    console.log(headerContent);
-
     header.innerHTML='';
+
     var index = 0;
     var id=setInterval(function() {
         header.innerHTML += headerContent[index++];
