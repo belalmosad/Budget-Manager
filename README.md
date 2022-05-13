@@ -67,7 +67,11 @@ The application relies on JavaScript's `window` property: `localStorage` as the 
 - [x] Fix bugs with info legend.
 - [ ] Build custom Confirm, prompt, and alert components instead of relying on browser's.
 - [ ] Implement data visualiation feature.
-    - [ ] First: Build a custom button for openning the visualization page.
+    - [x] First: Build a custom button for openning the visualization page.
+    - [x] Second: Add the page of visualisation data.
+    - [ ] Third: Implement the visualization elements (use svg).
+    - [ ] Fourth: Add dynamic data to the visualisation elements.
+    - [ ] Fifth: Animate the SVG.
 - [x] Implement responsive design for main page.
 - [x] Implement responsive design for form page.
 - [x] Fix Issue: Responsive Issue when adding long description in data table.
