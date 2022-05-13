@@ -19,6 +19,9 @@ document.body.onload = function() {
 
 function fillProgressBar(data, elemID, spanID) {
     var totalBudget = localStorage.getItem("totalBudget");
+    if(totalBudget == 0) {
+        return;
+    }
     var percent = (data / totalBudget)*100;
     var i = 0;
     var id = setInterval(function() {
