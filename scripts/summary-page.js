@@ -10,6 +10,7 @@ document.body.onload = function() {
             clearInterval(id);
         }
     }, 50);
+    
 
     fillProgressBar(localStorage.getItem("totalExpenses"), "exp-amount", "exp-percent");
     fillProgressBar(localStorage.getItem("remainingBudget"), "save-amount", "save-percent");

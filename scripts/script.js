@@ -127,7 +127,7 @@ document.querySelector("#vis-btn button").addEventListener('click', function() {
 (function() {
     var remainingBudget = localStorage.getItem("remainingBudget");
     var totalBudget = localStorage.getItem("totalBudget");
-    if(remainingBudget <= (totalBudget * 0.2)) {
+    if(remainingBudget < (totalBudget * 0.2)) {
         document.getElementById("rem").style.fontWeight = "bold";
         setInterval(function() {
             document.getElementById('rem').style.color = "red";
