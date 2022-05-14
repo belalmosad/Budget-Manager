@@ -4,6 +4,7 @@ Budgetary control to plan your expenses and savings.
 #### Content
 - <a href="https://github.com/belalmosad/Budget-Manager#technologies-used">Technologies Used.</a>
 - <a href="https://github.com/belalmosad/Budget-Manager#how-data-is-storedretrieved-in-this-application">How data is stored/retrieved in this application?</a>
+- <a href="https://github.com/belalmosad/Budget-Manager#application-demo">Application Demo</a>
 - <a href="https://github.com/belalmosad/Budget-Manager#description-of-data-in-localstorage">Description of data in `localStorage`.</a>
 - <a href="https://github.com/belalmosad/Budget-Manager#problems-issues-and-solutions">Problems, Issues, and Solutions.</a>
 - <a href="https://github.com/belalmosad/Budget-Manager#todo">TODO.</a>
@@ -16,6 +17,8 @@ Budgetary control to plan your expenses and savings.
 
 ## How data is stored/retrieved in this application?
 The application relies on JavaScript's `window` property: `localStorage` as the method of storing/retrieving data.
+
+## Application Demo
 
 ## Description of data in `localStorage`
 
