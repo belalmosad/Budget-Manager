@@ -33,6 +33,14 @@ The application relies on JavaScript's `window` property: `localStorage` as the 
 <img src="https://github.com/belalmosad/Budget-Manager/blob/main/Assets/Images-for-md/data-summary.PNG" width="50%">
 <hr>
 
+### Responsive Design
+<div>
+    <img src="https://github.com/belalmosad/Budget-Manager/blob/main/Assets/Images-for-md/lg-screen.PNG" width="33.33%">
+    <img src="https://github.com/belalmosad/Budget-Manager/blob/main/Assets/Images-for-md/md-screen.PNG" width="33.33%">
+    <img src="https://github.com/belalmosad/Budget-Manager/blob/main/Assets/Images-for-md/sm-screen.PNG" width="33.33%">
+</div>
+<hr>
+
 
 ## Description of data in `localStorage`
 
