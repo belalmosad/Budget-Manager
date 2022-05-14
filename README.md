@@ -66,12 +66,12 @@ The application relies on JavaScript's `window` property: `localStorage` as the 
 - [x] Implement Edit functionality for each expense item.
 - [x] Fix bugs with info legend.
 - [ ] Build custom Confirm, prompt, and alert components instead of relying on browser's.
-- [ ] Implement data visualiation feature.
+- [x] Implement data visualiation feature.
     - [x] First: Build a custom button for openning the visualization page.
     - [x] Second: Add the page of visualisation data.
-    - [ ] Third: Implement the visualization elements (use svg / normal divs bars).
-    - [ ] Fourth: Add dynamic data to the visualisation elements.
-    - [ ] Fifth: Animate the SVG / divs.
+    - [x] Third: Implement the visualization elements (normal divs bars).
+    - [x] Fourth: Add dynamic data to the visualisation elements.
+    - [x] Fifth: Animate the divs.
 - [x] Implement responsive design for main page.
 - [x] Implement responsive design for form page.
 - [x] Fix Issue: Responsive Issue when adding long description in data table.
