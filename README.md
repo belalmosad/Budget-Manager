@@ -1,6 +1,14 @@
 # Budget-Manager
 Budgetary control to plan your expenses and savings.
 
+#### Content
+- [Technologies used.] (https://github.com/belalmosad/Budget-Manager#technologies-used)
+- How data is stored/retrieved in this application?
+- Description of data in `localStorage`.
+- Problems, Issues, and Solutions.
+- TODO.
+- Ideas for future improvements.
+
 ## Technologies used
 - HTML
 - CSS
