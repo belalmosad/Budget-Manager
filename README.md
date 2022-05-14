@@ -23,14 +23,14 @@ The application relies on JavaScript's `window` property: `localStorage` as the 
 <img src="https://github.com/belalmosad/Budget-Manager/blob/main/Assets/Images-for-md/homepage.PNG" width="50%"/><hr>
 
 ### Form for adding expense item
-<img src="https://github.com/belalmosad/Budget-Manager/blob/main/Assets/add-item-form.png" width="50%"><hr>
+<img src="https://github.com/belalmosad/Budget-Manager/blob/main/Assets/Images-for-md/add-item-form.PNG" width="50%"><hr>
 
 ### When user tries to add expense that costs more than remaining money.
-<img src="https://github.com/belalmosad/Budget-Manager/blob/main/Assets/no-enough-money.png" width="50%">
+<img src="https://github.com/belalmosad/Budget-Manager/blob/main/Assets/Images-for-md/no-enough-money.PNG" width="50%">
 <hr>
 
 ### Data visualisation feature
-<img src="https://github.com/belalmosad/Budget-Manager/blob/main/Assets/data-summary.png" width="50%">
+<img src="https://github.com/belalmosad/Budget-Manager/blob/main/Assets/Images-for-md/data-summary.PNG" width="50%">
 <hr>
 
 
