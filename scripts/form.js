@@ -1,7 +1,7 @@
 document.forms[0].onsubmit= function(e){
     e.preventDefault();
     DataModel.initValues();
-    if(+localStorage.remainingBudget < (+localStorage.totalExpenses + +document.getElementById('cost').value)){
+    if(+localStorage.remainingBudget < +document.getElementById('cost').value){
         e.preventDefault();
         alert("You do not have enough money");
         return;
