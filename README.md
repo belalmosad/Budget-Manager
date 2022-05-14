@@ -35,9 +35,15 @@ The application relies on JavaScript's `window` property: `localStorage` as the 
 
 ### Responsive Design
 <div>
-    <img src="https://github.com/belalmosad/Budget-Manager/blob/main/Assets/Images-for-md/lg-screen.PNG" width="33.33%">
-    <img src="https://github.com/belalmosad/Budget-Manager/blob/main/Assets/Images-for-md/md-screen.PNG" width="33.33%">
-    <img src="https://github.com/belalmosad/Budget-Manager/blob/main/Assets/Images-for-md/sm-screen.PNG" width="33.33%">
+    <img src="https://github.com/belalmosad/Budget-Manager/blob/main/Assets/Images-for-md/lg-screen.PNG" width="25%">
+    <img src="https://github.com/belalmosad/Budget-Manager/blob/main/Assets/Images-for-md/md-screen.PNG" width="25%">
+    <img src="https://github.com/belalmosad/Budget-Manager/blob/main/Assets/Images-for-md/sm-screen.PNG" width="25%">
+</div>
+
+<div>
+    <img src="https://github.com/belalmosad/Budget-Manager/blob/main/Assets/Images-for-md/lg-data-screen.PNG" width="25%">
+    <img src="https://github.com/belalmosad/Budget-Manager/blob/main/Assets/Images-for-md/md-data-screen.PNG" width="25%">
+    <img src="https://github.com/belalmosad/Budget-Manager/blob/main/Assets/Images-for-md/sm-data-screen.PNG" width="25%">
 </div>
 <hr>
 
