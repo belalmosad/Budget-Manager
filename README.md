@@ -19,6 +19,7 @@ Budgetary control to plan your expenses and savings.
 The application relies on JavaScript's `window` property: `localStorage` as the method of storing/retrieving data.
 
 ## Application Demo
+### **Live Demo**: https://belalmosad.github.io/Budget-Manager/
 ### Homepage
 <img src="https://github.com/belalmosad/Budget-Manager/blob/main/Assets/Images-for-md/homepage.PNG" width="50%"/><hr>
 
