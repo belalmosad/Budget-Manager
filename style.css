@@ -239,7 +239,7 @@ table td {
     height: 3rem;
 }
 
-.budget-info {
+.info {
     width: 60%;
     border: 2px solid rgba(128, 128, 128, 0.315);
     border-radius: 10px;
@@ -249,7 +249,7 @@ table td {
     padding: 5px;
     margin-top: 20px;
 }
-.budget-info label, .progress {
+.info label, .progress {
     margin-top: 20px;
 }
 .progress {
@@ -266,12 +266,12 @@ table td {
     background-color: #E94560;
 }
 
-#exp-percent, #save-percent {
+.info span {
     color: aliceblue;
 }
 
 @media screen and (max-width: 444px){
-    .budget-info label {
+    .info label {
         font-size: small;
     }
 }
