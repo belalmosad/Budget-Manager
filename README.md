@@ -15,9 +15,6 @@ Budgetary control to plan your expenses and savings.
 - CSS
 - Vanilla JavaScript
 
-## How data is stored/retrieved in this application?
-The application relies on JavaScript's `window` property: `localStorage` as the method of storing/retrieving data.
-
 ## Application Demo
 ### **Live Demo**: https://belalmosad.github.io/Budget-Manager/
 ### Homepage
@@ -47,6 +44,11 @@ The application relies on JavaScript's `window` property: `localStorage` as the 
     <img src="https://github.com/belalmosad/Budget-Manager/blob/main/Assets/Images-for-md/sm-data-screen.PNG" width="25%">
 </div>
 <hr>
+
+
+## How data is stored/retrieved in this application?
+The application relies on JavaScript's `window` property: `localStorage` as the method of storing/retrieving data.
+
 
 
 ## Description of data in `localStorage`
