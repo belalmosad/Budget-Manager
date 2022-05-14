@@ -65,7 +65,6 @@ The application relies on JavaScript's `window` property: `localStorage` as the 
 - [x] Implement HTML and CSS for Edit single expense item.
 - [x] Implement Edit functionality for each expense item.
 - [x] Fix bugs with info legend.
-- [ ] Build custom Confirm, prompt, and alert components instead of relying on browser's.
 - [x] Implement data visualiation feature.
     - [x] First: Build a custom button for openning the visualization page.
     - [x] Second: Add the page of visualisation data.
@@ -77,3 +76,7 @@ The application relies on JavaScript's `window` property: `localStorage` as the 
 - [x] Fix Issue: Responsive Issue when adding long description in data table.
 - [x] Implement responsiveness to Edit item form.
 
+## Ideas for future improvements
+- Build custom Confirm, prompt, and alert components instead of relying on browser's built-ins.
+- Implement pie charts in visualisation section.
+- Aggregate each category in one separate table alongside with the main containing table.
