@@ -2,12 +2,12 @@
 Budgetary control to plan your expenses and savings.
 
 #### Content
-[Technologies used.] (https://github.com/belalmosad/Budget-Manager#technologies-used)
-- How data is stored/retrieved in this application?
-- Description of data in `localStorage`.
-- Problems, Issues, and Solutions.
-- TODO.
-- Ideas for future improvements.
+- <a href="https://github.com/belalmosad/Budget-Manager#technologies-used">Technologies Used.</a>
+- <a href="https://github.com/belalmosad/Budget-Manager#how-data-is-storedretrieved-in-this-application">How data is stored/retrieved in this application?</a>
+- <a href="https://github.com/belalmosad/Budget-Manager#description-of-data-in-localstorage">Description of data in `localStorage`.</a>
+- <a href="https://github.com/belalmosad/Budget-Manager#problems-issues-and-solutions">Problems, Issues, and Solutions.</a>
+- <a href="https://github.com/belalmosad/Budget-Manager#todo">TODO.</a>
+- <a href="https://github.com/belalmosad/Budget-Manager#ideas-for-future-improvements">Ideas for future improvements.</a>
 
 ## Technologies used
 - HTML
