@@ -67,12 +67,12 @@ function fillCategoryCosts(cost, itemID, spanID) {
         return;
     }
     var i = 0;
-    var totalExpenses = +localStorage.getItem("totalExpenses");
-    var costPercent = (+cost / totalExpenses)*100;
+    var totalExpenses = localStorage.getItem("totalExpenses");
+    var costPercent = (cost / totalExpenses)*100;
     var id = setInterval(function() {
         document.getElementById(itemID).style.width = i+'%';
-        document.getElementById(spanID).innerHTML = i+'%';
-        if(i > costPercent) {
+        animatePercent(spanID, i+"%");
+        if(i >= costPercent) {
             clearInterval(id);
         }
         i++;
